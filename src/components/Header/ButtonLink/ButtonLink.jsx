@@ -14,7 +14,7 @@ const ButtonLink = ({ link }) => {
         <button
           className="group"
           type="button"
-          tw="text-white inline-flex items-center text-base leading-6 font-medium hover:text-gray-300 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150 border rounded py-1 px-2"
+          tw="text-white inline-flex items-center text-base leading-6 font-medium hover:text-gray-300 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150 border rounded py-1 px-2 my-2"
           onClick={() => setOpen(!isOpen)}
         >
           <span>{link.label}</span>
@@ -43,13 +43,13 @@ const ButtonLink = ({ link }) => {
           --> */}
         <div
           css={[
-            tw`absolute -ml-4 mt-3 transform px-2 sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2`,
+            tw`absolute -ml-10 mt-3 transform px-2 sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2`,
             isOpen ? tw`block` : tw`hidden`,
           ]}
         >
           <div tw="rounded-lg shadow-lg">
             <div tw="rounded-lg shadow-xs overflow-hidden">
-              <div tw="z-20 relative bg-white flex flex-col w-64">
+              <div tw="z-50 relative bg-white flex flex-col w-64">
                 {link.childItems.nodes.map(item => (
                   <Link
                     to={item.path}
